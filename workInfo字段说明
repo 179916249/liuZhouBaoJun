@@ -1,0 +1,92 @@
+{
+    "serverCode": "dataWorkOrderImport2",
+    "signCode": "gt",
+    "jsonData": {
+        "workOrderCode": "工单单号*",
+        "workOrderRepairType": "保养1",
+        "workOrderCategoryCode": "主要工单分类代码",
+        "workOrderWorkCategoryID": "主要工单分类ID（工单分类代码API查询）",
+        "workOrderSettlementOrder": "预约单号",
+        "workOrderCatetoryList": [
+            "自定工单分类名称（数组）"
+        ],
+        "workOrderCarMileageKM": "进厂里程*",
+        "workOrderRecordedDate": "结算时间 *",
+        "workOrderBeginFixDate": "来厂时间 *",
+        "workOrderDeliveryCarDate": "交车时间",
+        "workOrderFinishOverDate": "竣工时间",
+        "workOrderPromiseOverDate": "预计交车时间",
+        "workOrderNextMaintenDate": "下次保养时间",
+        "workOrderAllowanceWorkTimeMoney": "工时折扣金額  ",
+        "workOrderPayableWorkTimeMoney": "工時應付金額  ",
+        "workOrderTotalWorkTimeMoney": "工时合计金額  ",
+        "workOrderAllowancePartsMoney": "零件折扣金額 ",
+        "workOrderPayablePartsMoney": "零件應付金額",
+        "workOrderTotalPartsMoney": "零件合计金額",
+        "workOrderCostPartsMoney": "零件成本金額",
+        "workOrderAllowanceCostMoney": "总折扣金额",
+        "workOrderPayableCostMoney": "应付总金额 *",
+        "workOrderTotalCostMoney": "总金額",
+        "workOrderCostAllMoney": "成本总数金额",
+        "workOrderHireEmployeeName": "服务顾问 ",
+        "workOrderMaintenanceTechnician": "维修技师",
+        "msReasonMBreakdownWhy": "故障描述",
+        "msReasonCheckResultWhy": "檢測結果",
+        "msReasonNextTimeFixSuggest": "下次維修建議",
+        "workOrderSendCarRepairMan": "送修人",
+        "workOrderSendCarRepairManTelephone": "送修人电话",
+        "WorkOrderMemo": "维修备注",
+        "customCarVIN": "车辆VIN*",
+        "customCarCarLicence": "车辆牌号",
+        "customCustomName": "车主",
+        "customActionPhone": "车主电话 ",
+        "workOrderWarrantyMoney": "索赔金額",
+        "workOrderWarrantyPartMoney": "索赔零件金額",
+        "workOrderWarrantyWorkTimeMoney": "索赔工时金額",
+        "workOrderCostPartMoney": "成本零件金额",
+        "partArray": [
+            {
+                "itemCode": "零件代码",
+                "itemName": "零件名称",
+                "itemAmount": "零件数量",
+                "itemMoney": "零件金额",
+                "itemOneMoney": "零件单价",         #终端销售单价
+                "itemOneCostMoney": "零件成本金额(icare)",
+                "itemType": "零件维修分类",
+                "itemPayType": "零件付款分类",
+                "itemWorkCategoryID": "GBOX维修分类ID",
+                "itemOneSellMoney": "销售单价",     #销售定价
+                "itemPickingOrder": "領料單號",
+                "itemPickingTechnician": "領料技師",
+                "itemPickingGroup": "领料组",
+                "itemPickingDate": "領料日期",
+                "itemDiscountRate": "折扣比",
+                "itemDiscountMoney": "折扣金额"
+            }
+        ],
+        "maintainArray": [
+            {
+                "itemCode": "工时代码",
+                "itemName": "工时名称",
+                "itemAmount": "工时使用时数",
+                "itemMoney": "工时金额",
+                "itemType": "工时维修分类",
+                "itemPayType": "工时付款分类",
+                "itemWorkCategoryID": "GBOX维修分类ID",
+                "itemTechnician": "维修技师",
+                "itemDiscountRate": "折扣比率",
+                "itemDiscountMoney": "折扣金額",
+                "itemStandardWorkTime": "標準工時"
+            }
+        ],
+        "balanceArray": [
+            {
+                "workCategoryId": "GBOX分类ID",
+                "workCategoryName": "自定维修名称",
+                "partCostPrice": "零件成本金额",
+                "partSalePrice": "零件收入金额",
+                "maintainSalePrice": "工时收入金额"
+            }
+        ]
+    }
+}
