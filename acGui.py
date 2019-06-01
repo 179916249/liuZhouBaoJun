@@ -161,7 +161,7 @@ class CarsExportClass:
                 n += 1
                 if n > 10:
                     break
-                print(e)
+                print(e )
         n = 0
         while True:
             try:
