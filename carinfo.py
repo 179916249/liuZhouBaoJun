@@ -27,6 +27,10 @@ class CarInfoClass:
     carInsuranceCode = ""  # 保險公司代号
     carWarrantyDate = ""  # 车辆保修到期
     carPeriodicMaintenanceDate = ""  # 保險到期日
+    carBrand = ""   # 品牌
+    carFactory = ""
+    carSerial = ""  # 车系
+    carModel = ""   # 车型
     customPersonName = ""  # 客户名称*
     customPhone = ""  # 客户电话*
     customTelPhone = ""  # 客户家电话
@@ -86,6 +90,9 @@ class CarInfoClass:
         self.delivererBaSexID = self.kwargs.get("delivererBaSexID")
         self.memo = self.kwargs.get("memo")
         self.delivererPhone = self.kwargs.get("delivererPhone")
+        self.carBrand = self.kwargs.get("carBrand")
+        self.carSerial = self.kwargs.get("carSerial")
+        self.carModel = self.kwargs.get("carModel")
 
     def uploadCar(self):
         """
@@ -113,6 +120,10 @@ class CarInfoClass:
             "carInsuranceCode": self.carInsuranceCode,
             "carWarrantyDate": self.carWarrantyDate,
             "carPeriodicMaintenanceDate": self.carPeriodicMaintenanceDate,
+            "carBrand": self.carBrand,
+            "carFactory": "",
+            "carSerial": self.carSerial,
+            "carModel": self.carModel,
             "customPersonName": self.customPersonName,
             "customPhone": self.customPhone,
             "customTelPhone": self.customTelPhone,

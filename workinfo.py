@@ -202,13 +202,18 @@ class WorkInfoClass():
         }
         # print(workInfoJson)
         # """
-        
-        req = requests.post(self.apiUrl, data=workInfoJson)
-        rep = req.json()
-        if rep.get('showMsg') == '完成处理':
-            self.log.logger.info('{0}:{1} updata success...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
-            print('{0}:{1} updata success...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
+
+        if str(self.signCode) == '6451135' and self.workOrderRepairType in ['航班服务'] or float(self.workOrderTotalCostMoney) <= 0:
+            self.log.logger.info('{0}:{1} not updata success...'.format(self.workOrderRecordedDate, self.workOrderCode, ))
+            print('{0}:{1} not updata success...'.format(self.workOrderRecordedDate, self.workOrderCode, ))
         else:
-            self.log.logger.info('{0}:{1} updata error...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
-            print('{0}:{1} updata error...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
-        # """
+
+            req = requests.post(self.apiUrl, data=workInfoJson)
+            rep = req.json()
+            if rep.get('showMsg') == '完成处理':
+                self.log.logger.info('{0}:{1} updata success...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
+                print('{0}:{1} updata success...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
+            else:
+                self.log.logger.info('{0}:{1} updata error...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
+                print('{0}:{1} updata error...'.format(self.workOrderRecordedDate,self.workOrderCode, ))
+            # """

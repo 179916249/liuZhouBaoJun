@@ -329,8 +329,8 @@ class importAllEx:
                 # 购车单位[4]
                 # 客户级别[5]
                 carLicence = rows[6].value      # 车辆牌号*
-                # 车型平台[7]
-                # 车型[8]
+                carSerial = rows[7].value   # 车型平台[7]
+                carModel = rows[8].value # 车型[8]
                 carVIN = rows[9].value      # 车辆VIN*
                 # VSN[10]
                 carEngineCode = rows[11].value  # 车辆动机号
@@ -352,7 +352,7 @@ class importAllEx:
                 carSaleInvoiceDate = self.dateFormat(rows[19].value) # 发票日销售日
                 # 行驶里程[20]
                 # 最近来厂日期[21]
-                # 厂牌[22]
+                carBrand = rows[22].value  # 厂牌[22]
                 carWarrantyDate = self.dateFormat(rows[23].value)    # 车辆保修到期
                 # 累计积分[24]
                 # 积分余额[25]
@@ -378,7 +378,8 @@ class importAllEx:
                                              "delivererBaSexID":delivererBaSexID,"delivererPhone":delivererPhone,"delivererAddress":delivererAddress,
                                              "carSaleInvoiceDate":carSaleInvoiceDate,"carWarrantyDate":carWarrantyDate,"carSaleManName":carSaleManName,
                                              "carInsuranceCompany":carInsuranceCompany,"carPeriodicMaintenanceDate":carPeriodicMaintenanceDate,"memo":memo,
-                                             "customAddress":customAddress,"customPhone":customPhone}})
+                                             "customAddress":customAddress,"customPhone":customPhone, "carBrand": carBrand, "carSerial": carSerial,
+                                                  "carModel": carModel}})
 
 
 class GetWorksCarsClass:
